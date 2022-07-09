@@ -7,6 +7,7 @@ function classNames(...classes){
 
 
 function ListComponent(props) {
+  if(!props.myList.error){
     const listItems = props.myList.map((item) =>
           <li key={item.id}>
              {item.bookTitle}
@@ -15,6 +16,11 @@ function ListComponent(props) {
     return (
           <ul>{listItems}</ul>
         );
+  }else{
+    return(
+      <div>err {props.myList.error} </div>
+    );
+  }
 }
 
 
@@ -174,7 +180,7 @@ export default function Example() {
           show db
         </button>
       </div>
-        <div>{APIResponse? <ListComponent myList={APIResponse} />:<div>ok</div>}</div>
+        <div>{APIResponse? <ListComponent myList={APIResponse} />:<div>none</div>}</div>
         {   /*APIResponse?.map((book) => (<li>{book.bookTitle}</li>))*/  }
       </div>
 
