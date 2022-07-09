@@ -6,11 +6,27 @@ function classNames(...classes){
 }
 
 
+function ListComponent(props) {
+    const listItems = props.myList.map((item) =>
+          <li key={item.id}>
+             {item.bookTitle}
+           </li>
+        );
+    return (
+          <ul>{listItems}</ul>
+        );
+}
+
+
+
+
+
+
 export default function Example() {
   const[bookTitle, setBookTitle]=useState("");
   const[bookAuthor, setBookAuthor]=useState("");
   const[bookGenre, setBookGenre]=useState("");
-const[APIResponse, setAPIResponse]=useState(null);
+  const[APIResponse, setAPIResponse]=useState(null);
   useEffect(() => {
     console.log("bookTitle", bookTitle);
     console.log("bookAuthor", bookAuthor);
@@ -158,7 +174,8 @@ const[APIResponse, setAPIResponse]=useState(null);
           show db
         </button>
       </div>
-      <div>{APIResponse?.map((book) => (<li>{book.bookTitle}</li>))}</div>
+        <div>{APIResponse? <ListComponent myList={APIResponse} />:<div>ok</div>}</div>
+        {   /*APIResponse?.map((book) => (<li>{book.bookTitle}</li>))*/  }
       </div>
 
     </div>
