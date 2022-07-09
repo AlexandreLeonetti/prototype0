@@ -19,11 +19,14 @@ export default async function handler(req, res) {
 
 async function readBooks(req, res){
   const body = req.body;
+  console.log(req)
+  console.log(res)
   try{
     const allbooks = await prisma.bookSuggestion.findMany();
     return res.status(200).json(allbooks, {success:true});
   }catch (error) {
-    console.log(error)
+    console.log("could not access planetscale");
+    console.log(error);
     return res.status(500).json({error: "Error reading from database", success: false});
   }
 }
