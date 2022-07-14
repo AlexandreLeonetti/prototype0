@@ -1,0 +1,103 @@
+body{
+
+/*  background-color:#222;*/
+  /* stat background should be white*/
+  height:100%;
+}
+.betweenVoid:empty::before{
+  content: "\200b";
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+          margin: 0;
+          }
+
+          input[type=number] {
+              -moz-appearance:textfield;
+              }
+/*.container{
+  width:100%;
+height:100%;
+}
+.containFlash{
+  height:20em;
+}
+.containParam{
+}
+.containStartScore{
+}
+.containButton{
+  gap: 0.5rem;
+  padding:0.5rem;
+  display:grid;
+}
+.mainFlashClass{
+}
+.mainFlash{
+  margin-top:0px;
+  margin-bottom:0px;
+  padding-top:4rem;
+  font-size:9rem;
+  color:white;
+  text-align:center;
+}
+.enterResult{
+  padding:4rem;
+  text-align:center;
+}
+.marvelous{
+  padding-top:4rem;
+  text-align:center;
+  margin-top:0px;
+  margin-bottom:0px;
+
+}
+.floatLeft{
+}
+.w100{
+  width:100%;
+}
+.param{
+  display:grid;
+  margin: 0 auto;
+  padding:9px;
+}
+@media (min-width:600px) {
+  .param{
+    grid-template-columns:repeat(2, 1fr);
+  }
+}
+
+.containParam input{
+  border-radius:5px;
+ font-size:1.2rem; 
+ padding:0.25em;
+ border-style:none;
+}
+
+.containParam label{
+  font-size:1rem;
+}
+.button{
+  border-radius:5px;
+  border-style:none;
+  height:3rem;
+  background-color:#23b485;
+}
+
+.Stats{
+  margin:0.5rem;
+
+  height: 90%;
+  border-style:none;
+  border-radius:5px;
+  display:block;
+}
+.innerStats{
+  padding:2%;
+}
+.innerStats h1{
+  margin:0;
+}
+*/
