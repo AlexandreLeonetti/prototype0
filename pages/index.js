@@ -36,13 +36,10 @@ export default function Example() {
 
 
   return(
-		<div>
+	<div>
 	 <div className="App">
-
-      <ContainsFlashClass/>
-    </div>
-  		hello world
-
-	  	</div>
+      	  <ContainsFlashClass/>
+    	 </div>
+	</div>
   )
 }
